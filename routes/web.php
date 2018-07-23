@@ -12,14 +12,14 @@
 */
 Route::any('/', 'IndexController@about');
 
-Route::get('/test', 'IndexController@testGet')->name('route1');
+// Route::get('/test', 'IndexController@testGet')->name('route1');
 
-Route::post('/test', 'IndexController@testPost')->name('route2');
+// Route::post('/test', 'IndexController@testPost')->name('route2');
 
-Route::get('/news/{slug}.{id}', 'IndexController@getNews')
-    ->where(['id' => '[0-9]+',
-             'slug' => '[a-zA-Z0-9-_]+'   
-            ]);
+// Route::get('/news/{slug}.{id}', 'IndexController@getNews')
+//     ->where(['id' => '[0-9]+',
+//              'slug' => '[a-zA-Z0-9-_]+'   
+//             ]);
 
 
 // Route::get('/', function () {

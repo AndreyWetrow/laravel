@@ -1,9 +1,23 @@
-<h1>Привет, {{$name}}</h1>
-<h1>Мне, {{$age}} лет!</h1>
+<h1>Привет, {{ $name or '' }}</h1>
+<h1>Мне, {{ $age or '' }} лет!</h1>
 
-<form method="POST" action="">
-    {{csrf_field()}}
-    Login: <input type="text" name="login"><br>
-    Password: <input type="text" name="password">
-    <input type="submit" value="Go!">
-</form>
+@verbatim
+    <div class="container">
+        Hello, {{ name }}.
+    </div>
+@endverbatim
+
+@unless (false)
+    You are not signed in.
+@endunless
+
+@auth 
+    Я авторизован
+@endauth
+
+@guest 
+    Я гость
+@endguest
+ 
+
+@include ('welcome');
